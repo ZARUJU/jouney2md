@@ -72,7 +72,7 @@ def remove_memo_lines(file_a):
 folder_path = '../json'  # 対象のフォルダパスを指定してください
 date_journal_values, text_values = read_json_files(folder_path)
 
-result_file = 'result.md'
+result_file = '../result.md'
 
 # 既存のファイルがあれば削除
 if os.path.exists(result_file):

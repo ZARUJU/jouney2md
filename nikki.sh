@@ -6,7 +6,6 @@ if [ ! -d venv ];then
 fi
 
 if [ -d venv ];then
-    cd /Users/kzk/Dev/journey
     source venv/bin/activate
     cd py-AAA
     python3 journey_md.py
