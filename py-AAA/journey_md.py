@@ -41,6 +41,11 @@ def read_json_files(folder_path):
                         replace("風呂出た", "入浴").\
                         replace("就寝", "就寝\n").\
                         replace("体温", "体温：").\
+                        replace("00:", "24:").\
+                        replace("01:", "25:").\
+                        replace("02:", "26:").\
+                        replace("03:", "27:").\
+                        replace("", "").\
                         replace("", "")
                     text_list.append(modified_text_value)
 
