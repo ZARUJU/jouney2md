@@ -2,6 +2,7 @@ import os
 import json
 from datetime import datetime
 
+
 def read_json_files(folder_path):
     date_journal_list = []
     text_list = []
@@ -11,15 +12,21 @@ def read_json_files(folder_path):
             file_path = os.path.join(folder_path, filename)
             with open(file_path, 'r') as file:
                 json_data = json.load(file)
-                if 'date_journal' in json_data:
-                    date_journal_value = str(json_data['date_journal'])
-                    # 下位3桁を削除する例
-                    modified_date_journal_value = date_journal_value[:-3]
-                    date_journal_list.append(modified_date_journal_value)
-                if 'text' in json_data:
-                    text_value = json_data['text']
-                    # 特定の文字列を削除
-                    modified_text_value = text_value.\
+                if 'title' in json_data and TARGET_STRING in json_data['title']:
+                    # タイトルに特定の文字列が含まれる場合にのみ処理を行う
+                    if 'date_journal' in json_data:
+                        date_journal_value = str(json_data['date_journal'])
+                        modified_date_journal_value = date_journal_value[:-3]
+                        date_journal_list.append(modified_date_journal_value)
+                    if 'text' in json_data:
+                        text_value = json_data['text']
+                        modified_text_value = text_value.\
+                            replace("<p dir=\"auto\">", "").\
+                        replace("</p>", "").\
+                        replace("のる", "~").\
+                        replace("いつかいち", "五日市").\
+                        replace("かいさん", "解散").\
+                        replace("りひ", "リビング").\
                         replace("<p dir=\"auto\">", "").\
                         replace("</p>", "").\
                         replace("のる", "~").\
@@ -73,6 +80,8 @@ def remove_memo_lines(file_a):
 
     with open(file_a, 'w') as file:
         file.writelines(lines)
+
+TARGET_STRING = "2023-04-01"  # タイトルに含まれる特定の文字列
 
 folder_path = './json'  # 対象のフォルダパスを指定してください
 date_journal_values, text_values = read_json_files(folder_path)
