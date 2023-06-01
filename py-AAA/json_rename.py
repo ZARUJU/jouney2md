@@ -33,4 +33,4 @@ for file_name in file_list:
         new_file_path = os.path.join(folder_path, new_file_name)
         os.rename(json_file, new_file_path)
 
-        print(f"{file_name} を {new_file_name} に変更しました。")
+print(f"jsonをリネームしました。")
