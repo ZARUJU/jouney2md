@@ -1,3 +1,6 @@
+# 「~」の処理を行うプログラム
+
+
 def remove_newline_after_pattern(file_path, pattern):
     with open(file_path, 'r') as file:
         lines = file.readlines()
