@@ -39,7 +39,7 @@ def read_json_files(folder_path):
                         replace("終了", "終了：分早い").\
                         replace("風呂入る", "~").\
                         replace("風呂出た", "入浴").\
-                        replace("就寝", "就寝\n").\
+                        replace("就寝", "就寝\n\n\n").\
                         replace("体温", "体温：").\
                         replace("00:", "24:").\
                         replace("01:", "25:").\
