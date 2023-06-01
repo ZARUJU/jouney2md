@@ -10,5 +10,5 @@ if [ -d venv ];then
     cd py-AAA
     python3 journey_md.py
     python3 atosyori_1.py
-    python3 atosyori_2.py
+    # python3 atosyori_2.py
 fi
