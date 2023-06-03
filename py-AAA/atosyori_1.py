@@ -27,6 +27,7 @@ search_pattern = '~'
 
 # 改行削除を実行
 remove_newline_after_pattern(file_path, search_pattern)
+remove_newline_after_pattern(file_path, search_pattern)
 
 # 空白削除を実行
 remove_whitespace_before_pattern(file_path, search_pattern)

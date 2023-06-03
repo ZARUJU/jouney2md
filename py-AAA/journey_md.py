@@ -21,7 +21,7 @@ def read_json_files(folder_path):
                     # 特定の文字列を削除
                     modified_text_value = text_value.\
                         replace("<p dir=\"auto\">", "").\
-                        replace("</p>", "").\
+                        replace("</p>", "\n").\
                         replace("のる", "~").\
                         replace("いつかいち", "五日市").\
                         replace("かいさん", "解散").\
@@ -74,10 +74,10 @@ def remove_memo_lines(file_a):
     with open(file_a, 'w') as file:
         file.writelines(lines)
 
-folder_path = './json'  # 対象のフォルダパスを指定してください
+folder_path = '../json'  # 対象のフォルダパスを指定してください
 date_journal_values, text_values = read_json_files(folder_path)
 
-result_file = 'result.md'
+result_file = '../result.md'
 
 # 既存のファイルがあれば削除
 if os.path.exists(result_file):
