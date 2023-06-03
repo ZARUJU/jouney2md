@@ -3,7 +3,7 @@ import os
 from datetime import datetime
 
 # JSONファイルが格納されたフォルダのパス
-folder_path = 'json'
+folder_path = '../json'
 
 # フォルダ内のファイルを取得
 file_list = os.listdir(folder_path)

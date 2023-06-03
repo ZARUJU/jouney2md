@@ -37,6 +37,8 @@ def read_json_files(folder_path):
                         replace("大学バス", "移動：バス　横川駅 ー 大学").\
                         replace("着席", "着席：分前").\
                         replace("終了", "終了：分早い").\
+                        replace("プレッジ", "~").\
+                        replace("ついた", "~").\
                         replace("風呂入る", "~").\
                         replace("風呂出た", "入浴").\
                         replace("就寝", "就寝\n\n\n").\
