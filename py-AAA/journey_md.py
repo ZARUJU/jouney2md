@@ -26,6 +26,7 @@ def read_json_files(folder_path):
                         replace("いつかいち", "五日市").\
                         replace("かいさん", "解散").\
                         replace("りひ", "リビング").\
+                        replace("起床", "起床・ー移動：リビングー").\
                         replace("リビング", "ー移動：リビングー").\
                         replace("部屋帰還", "ー移動：部屋帰還ー").\
                         replace("ー移動：ー移動：部屋帰還ーー", "ー移動：部屋帰還ー").\
