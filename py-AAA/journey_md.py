@@ -51,6 +51,7 @@ def read_json_files(folder_path):
                         replace("01:", "25:").\
                         replace("02:", "26:").\
                         replace("03:", "27:").\
+                        replace("コーヒーラウンジ", "コーヒーラウンジ\n\n　昼飯：ベジサンド(照り焼きチキン)").\
                         replace("", "").\
                         replace("", "")
                     text_list.append(modified_text_value)
